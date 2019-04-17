@@ -1,0 +1,31 @@
+
+
+
+<!-- <div class="alert alert-success"> server1 works!</div> -->
+ 
+<div class="container">
+<h1 class="text-center text-primary">Components, 4-way Data-binding and Directives use...</h1>
+<h2 class = "text-secondary">Username:</h2>
+<!-- Two-Way-Data binding -->
+<input type = "text" class = "form-control" [(ngModel)] = "username">  
+
+
+
+
+<ng-template #showDefault>
+  <div>{{usernameCreationStatus}}</div>
+</ng-template>
+
+<!-- Event binding, Property binding -->
+<button class="btn btn-primary" [disabled]= "!allowNewUser" (click) = "createUserButton()">Add Username</button>
+
+<!-- ngIf directive, String Interpolation  -->
+<div *ngIf="userNameCreated; else showDefault" class="alert alert-success">User of name:"{{username}}" was created</div>
+<!-- <app-user *ngFor ="let user of users"></app-user> -->
+
+<h1>List of current users:</h1>
+
+<!-- ngFor directive -->
+<p *ngFor ="let user of users">{{user}}</p>
+
+
