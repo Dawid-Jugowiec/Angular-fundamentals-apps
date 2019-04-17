@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "deep-databinding": {
+    "life-cycle-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/deep-databinding",
+            "outputPath": "dist/life-cycle-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              
               "src/styles.css"
-              
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -60,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "deep-databinding:build"
+            "browserTarget": "life-cycle-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "deep-databinding:build:production"
+              "browserTarget": "life-cycle-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "deep-databinding:build"
+            "browserTarget": "life-cycle-app:build"
           }
         },
         "test": {
@@ -105,7 +103,7 @@
         }
       }
     },
-    "deep-databinding-e2e": {
+    "life-cycle-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -114,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "deep-databinding:serve"
+            "devServerTarget": "life-cycle-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "deep-databinding:serve:production"
+              "devServerTarget": "life-cycle-app:serve:production"
             }
           }
         },
@@ -134,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "deep-databinding"
+  "defaultProject": "life-cycle-app"
 }
